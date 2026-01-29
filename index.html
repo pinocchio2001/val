@@ -17,13 +17,15 @@
       background-size: 400% 400%;
       animation: gradientShift 8s ease infinite;
       min-height: 100vh;
+      min-height: 100dvh; /* Dynamic viewport height for mobile */
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #333;
-      overflow: hidden;
+      overflow: auto; /* Allow scrolling if needed */
       position: relative;
+      padding: 20px 15px; /* Add padding to prevent edge touching */
     }
 
     @keyframes gradientShift {
@@ -107,6 +109,10 @@
       position: relative;
       z-index: 1;
       border: 3px solid rgba(255, 182, 193, 0.5);
+      min-height: 500px; /* Hauteur minimale fixe */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .card::before {
@@ -258,8 +264,11 @@
       margin-top: 25px;
       font-size: 22px;
       font-weight: bold;
-      min-height: 40px;
+      min-height: 80px; /* Hauteur fixe pour le message */
       animation: fadeIn 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     @keyframes fadeIn {
@@ -288,12 +297,15 @@
       body {
         padding: 15px;
         align-items: center;
+        justify-content: center;
       }
 
       .card {
         padding: 25px 20px;
         border-radius: 20px;
         max-width: 100%;
+        margin: auto; /* Center horizontally */
+        min-height: 450px; /* Hauteur minimale pour mobile */
       }
 
       .card::before {
@@ -350,6 +362,7 @@
       #message {
         font-size: 18px;
         margin-top: 20px;
+        min-height: 70px; /* Hauteur fixe pour mobile */
       }
 
       .footer-deco {
@@ -506,4 +519,3 @@
 
 </body>
 </html>
-
