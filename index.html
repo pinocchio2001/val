@@ -109,10 +109,6 @@
       position: relative;
       z-index: 1;
       border: 3px solid rgba(255, 182, 193, 0.5);
-      min-height: 500px; /* Hauteur minimale fixe */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .card::before {
@@ -264,11 +260,8 @@
       margin-top: 25px;
       font-size: 22px;
       font-weight: bold;
-      min-height: 80px; /* Hauteur fixe pour le message */
+      min-height: 40px;
       animation: fadeIn 0.5s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     @keyframes fadeIn {
@@ -277,8 +270,9 @@
     }
 
     .sparkles {
-      display: inline-block;
+      display: block; /* Force nouvelle ligne */
       animation: sparkle 1s ease-in-out infinite;
+      margin-top: 10px; /* Espace entre le texte et les emojis */
     }
 
     @keyframes sparkle {
@@ -305,7 +299,6 @@
         border-radius: 20px;
         max-width: 100%;
         margin: auto; /* Center horizontally */
-        min-height: 450px; /* Hauteur minimale pour mobile */
       }
 
       .card::before {
@@ -362,7 +355,6 @@
       #message {
         font-size: 18px;
         margin-top: 20px;
-        min-height: 70px; /* Hauteur fixe pour mobile */
       }
 
       .footer-deco {
